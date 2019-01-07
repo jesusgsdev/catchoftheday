@@ -6,12 +6,17 @@ import sampleFishes from "../sample-fishes";
 import Fish from "./Fish";
 import base from "../base";
 import { timingSafeEqual } from "crypto";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
   state = {
     fishes: {},
     order: {}
   };
+
+  static protoTypes = {
+    match: PropTypes.object
+  }
 
   componentDidMount() {
     const { params } = this.props.match;
